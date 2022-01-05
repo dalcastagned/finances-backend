@@ -4,21 +4,16 @@ class Service {
   constructor(service) {
     this.service = service;
   }
-  contatos = async () => await this.service("contatos");
-  criarContato = async (data) =>
-    await (await this.service("contatos").insert(data).returning("*"))[0];
-  atualizarContato = async (id, data) =>
+  items = async () => await this.service("finance");
+  criarItem = async (data) =>
+    await (await this.service("finance").insert(data).returning("*"))[0];
+  atualizarItem = async (id, data) =>
     await (
-      await this.service("contatos").where({ id }).update(data).returning("*")
+      await this.service("finance").where({ id }).update(data).returning("*")
     )[0];
-  deletarContato = async (filtro) => {
+  deletarItem = async (filtro) => {
     if (filtro.id) {
-      return await this.service("contatos").where({ id: filtro.id }).delete();
-    }
-    if (filtro.email) {
-      return await this.service("contatos")
-        .where({ email: filtro.email })
-        .delete();
+      return await this.service("finance").where({ id: filtro.id }).delete();
     }
 
     throw new Error("Favor passar um parametro!!!");

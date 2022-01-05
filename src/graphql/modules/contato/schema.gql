@@ -1,27 +1,34 @@
-type Contato {
-  id: Int
-  nome: String
-  email: String
-  telefone: String
+scalar Date
+
+type MyType {
+   created: Date
 }
 
-input ContatoInput {
-  nome: String
-  email: String
-  telefone: String
+type Item {
+  id: Int
+  date: Date
+  category: String
+  title: String
+  value: Float
+}
+
+input ItemInput {
+  date: String
+  category: String
+  title: String
+  value: Float
 }
 
 input FiltroInput {
   id: Int
-  email: String
 }
 
 type Query {
-  contatos: [Contato]
+  items: [Item]
 }
 
 type Mutation {
-  criarContato(data: ContatoInput): Contato
-  atualizarContato(id: Int!, data: ContatoInput): Contato
-  deletarContato(filtro: FiltroInput): Boolean
+  criarItem(data: ItemInput): Item
+  atualizarItem(id: Int!, data: ItemInput): Item
+  deletarItem(filtro: FiltroInput): Boolean
 }
