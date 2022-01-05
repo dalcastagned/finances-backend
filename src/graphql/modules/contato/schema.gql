@@ -19,7 +19,7 @@ input ItemInput {
   value: Float
 }
 
-input FiltroInput {
+input FilterInput {
   id: Int
 }
 
@@ -28,7 +28,7 @@ type Query {
 }
 
 type Mutation {
-  criarItem(data: ItemInput): Item
-  atualizarItem(id: Int!, data: ItemInput): Item
-  deletarItem(filtro: FiltroInput): Boolean
+  addItem(data: ItemInput): Item
+  updateItem(id: Int!, data: ItemInput): Item
+  dropItem(filter: FilterInput): Boolean
 }

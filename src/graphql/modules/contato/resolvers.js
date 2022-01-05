@@ -4,11 +4,11 @@ module.exports = {
       await context.service.items(),
   },
   Mutation: {
-    criarItem: async (_, { data }, { service }) =>
-      await service.criarItem(data),
-    atualizarItem: async (_, { id, data }, { service }) =>
-      await service.atualizarItem(id, data),
-    deletarItem: async (_, { filtro }, { service }) =>
-      await service.deletarItem(filtro),
+    addItem: async (_, { data }, { service }) =>
+      await service.addItem(data),
+    updateItem: async (_, { id, data }, { service }) =>
+      await service.updateItem(id, data),
+    dropItem: async (_, { filter }, { service }) =>
+      await service.dropItem(filter),
   },
 };

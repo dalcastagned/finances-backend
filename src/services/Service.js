@@ -5,15 +5,15 @@ class Service {
     this.service = service;
   }
   items = async () => await this.service("finance");
-  criarItem = async (data) =>
+  addItem = async (data) =>
     await (await this.service("finance").insert(data).returning("*"))[0];
-  atualizarItem = async (id, data) =>
+  updateItem = async (id, data) =>
     await (
       await this.service("finance").where({ id }).update(data).returning("*")
     )[0];
-  deletarItem = async (filtro) => {
-    if (filtro.id) {
-      return await this.service("finance").where({ id: filtro.id }).delete();
+  dropItem = async (filter) => {
+    if (filter.id) {
+      return await this.service("finance").where({ id: filter.id }).delete();
     }
 
     throw new Error("Favor passar um parametro!!!");
