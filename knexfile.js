@@ -1,18 +1,22 @@
-// Update with your config settings.
-
 module.exports = {
-  client: "pg",
-  connection: {
-    database: "postgres",
-    user: "postgres",
-    password: "db123",
-  },
-  pool: {
-    min: 2,
-    max: 10,
-  },
-  migrations: {
-    tableName: "knex_migrations",
-    directory: "./src/db/migrations",
-  },
+  development: {
+      client: 'pg',
+      connection: 'postgres://localhost/todosvideo',
+      migrations: {
+          directory: __dirname + '/db/migrations',
+        },
+      seeds: {
+          directory: __dirname + '/db/seeds',
+        },
+    },
+  production: {
+      client: 'pg',
+      connection: process.env.DATABASE_URL,
+      migrations: {
+          directory: __dirname + '/db/migrations',
+        },
+      seeds: {
+          directory: __dirname + '/db/seeds',
+        },
+    },
 };
