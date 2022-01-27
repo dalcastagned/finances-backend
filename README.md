@@ -1,11 +1,40 @@
-## GraphQL using Apollo Server
+<h1 align="center">Bem-Vindo(a) ao projeto Finances Backend 👋</h1>
 
-In the project directory, you can run:
+## Descrição do Projeto
+<p align="left">Backend do projeto de finanças pessoais utilizando node.js, GraphQL e PostgreSQL, o frontend desse projeto pode ser encontrado nesse link: https://github.com/dalcastagned/finances-frontend</p>
 
-### `npm start`
+## Instalação
 
-Runs the app in the development mode.\
-Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+```sh
+npm install
+```
+## Inicialização
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+npm start
+```
+## Uso
+
+```sh
+Abra http://localhost:4000 para visualizar no seu browser
+```
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [GraphQL](https://graphql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+## Autor
+
+<a href="https://github.com/dalcastagned">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65626347?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Daniel Dalcastagne</b></sub></a> <a href="https://github.com/dalcastagned" title="Rocketseat">🚀</a>
+
+
+Feito com ❤️ por Daniel Dalcastagne 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-LINKEDIN-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/daniel-dalcastagne-4baa00179/)](https://www.linkedin.com/in/daniel-dalcastagne-4baa00179/) 
+[![Gmail Badge](https://img.shields.io/badge/-EMAIL-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:contato@danieldalcastagne.com)](mailto:contato@danieldalcastagne.com)
